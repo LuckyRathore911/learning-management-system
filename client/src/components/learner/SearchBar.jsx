@@ -9,7 +9,7 @@ const SearchBar = ({ data }) => {
 
   const onSearchHandler = e => {
     e.preventDefault();
-    navigate("/courses/", input);
+    navigate("/courses/" + input);
   };
 
   return (

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
 
 import { assets } from "../../assets/assets";
+import { AppContext } from "../../context/AppContext";
 
 const Navbar = () => {
+  const { navigate, isAdmin } = useContext(AppContext);
+
   const isCoursesListPage = location.pathname.includes("/courses");
   const { openSignIn } = useClerk();
   const { user } = useUser();
@@ -16,6 +19,7 @@ const Navbar = () => {
       }`}
     >
       <img
+        onClick={() => navigate("/")}
         src={assets.logo}
         alt="logo"
         className="w-36 lg:w-48 cursor-pointer"
@@ -24,8 +28,14 @@ const Navbar = () => {
         <div className="flex items-center gap-5">
           {user && (
             <>
-              <button>Become Admin</button> |
-              <Link to="/enrollments">My Enrollments</Link>
+              <button
+                onClick={() => {
+                  navigate("/admin");
+                }}
+              >
+                {isAdmin ? "Admin Dashboard" : "Become Admin"}
+              </button>
+              |<Link to="/enrollments">My Enrollments</Link>
             </>
           )}
         </div>
@@ -49,8 +59,14 @@ const Navbar = () => {
         <div className="flex items-center gap-1 sm:gap-2 max-sm:text-xs">
           {user && (
             <>
-              <button>Become Admin</button> |
-              <Link to="/enrollments">My Enrollments</Link>
+              <button
+                onClick={() => {
+                  navigate("/admin");
+                }}
+              >
+                {isAdmin ? "Admin Dashboard" : "Become Admin"}
+              </button>
+              |<Link to="/enrollments">My Enrollments</Link>
             </>
           )}
         </div>
