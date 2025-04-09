@@ -1,7 +1,9 @@
 import React from "react";
+
 import Introduction from "../../components/learner/Introduction";
 import CoursesSection from "../../components/learner/CoursesSection";
 import TestimonialsSection from "../../components/learner/TestimonialsSection";
+import CallToAction from "../../components/learner/CallToAction";
 
 const Home = () => {
   return (
@@ -9,6 +11,7 @@ const Home = () => {
       <Introduction />
       <CoursesSection />
       <TestimonialsSection />
+      <CallToAction />
     </div>
   );
 };

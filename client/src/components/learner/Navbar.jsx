@@ -22,7 +22,7 @@ const Navbar = () => {
         onClick={() => navigate("/")}
         src={assets.logo}
         alt="logo"
-        className="w-36 lg:w-48 cursor-pointer"
+        className="w-32 md:w-36 lg:w-40 cursor-pointer"
       />
       <div className="hidden md:flex items-center gap-5 text-gray-500">
         <div className="flex items-center gap-5">
