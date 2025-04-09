@@ -13,7 +13,10 @@ const CoursesSection = () => {
         Learn from the best
       </h2>
       <p className="text-sm md:text-base text-base-500 mt-3">
-        Discover courses across various categories.
+        Explore a wide range of courses across diverse categories designed to
+        help you upskill,
+        <br />
+        pursue your interests, and advance your career — all at your own pace.
       </p>
       <div className="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] px-4 md:px-0 md:my-16 my-10 gap-4">
         {allCourses.slice(0, 4).map((course, index) => (

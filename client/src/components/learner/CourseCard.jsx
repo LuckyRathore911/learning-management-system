@@ -28,7 +28,7 @@ const CourseCard = ({ course }) => {
                     ? assets.star
                     : assets.star_blank
                 }
-                alt=""
+                alt="star"
                 className="w-3.5 h-3.5"
               />
             ))}
