@@ -4,6 +4,7 @@ import Introduction from "../../components/learner/Introduction";
 import CoursesSection from "../../components/learner/CoursesSection";
 import TestimonialsSection from "../../components/learner/TestimonialsSection";
 import CallToAction from "../../components/learner/CallToAction";
+import Footer from "../../components/learner/Footer";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <CoursesSection />
       <TestimonialsSection />
       <CallToAction />
+      <Footer />
     </div>
   );
 };
