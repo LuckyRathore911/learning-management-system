@@ -10,6 +10,8 @@ export const AppContextProvider = props => {
   const currency = import.meta.env.VITE_CURRENCY;
   const [allCourses, setAllCourses] = useState([]);
   const [isAdmin, setIsAdmin] = useState(true);
+  const [enrolledCourses, setEnrolledCourses] = useState([]);
+
   const navigate = useNavigate();
 
   const fetchAllCourses = async () => {
@@ -59,8 +61,14 @@ export const AppContextProvider = props => {
     return totalLectures;
   };
 
+  //fetch user enrolled courses
+  const fetchUserEnrolledCourses = async () => {
+    setEnrolledCourses(dummyCourses);
+  };
+
   useEffect(() => {
     fetchAllCourses();
+    fetchUserEnrolledCourses();
   }, []);
 
   const value = {
@@ -73,6 +81,8 @@ export const AppContextProvider = props => {
     calculateChapterTime,
     calculateCourseDuration,
     calculateNumberOfLectures,
+    enrolledCourses,
+    fetchUserEnrolledCourses,
   };
 
   return (
