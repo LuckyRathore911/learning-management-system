@@ -1654,11 +1654,6 @@ react-router@7.4.1:
     set-cookie-parser "^2.6.0"
     turbo-stream "2.4.0"
 
-react-simple-star-rating@^5.1.7:
-  version "5.1.7"
-  resolved "https://registry.yarnpkg.com/react-simple-star-rating/-/react-simple-star-rating-5.1.7.tgz#5406ade8d0e117a654e979ebd702d89389876c29"
-  integrity sha512-NTFkW8W3uwvI82Fv7JW5i7gmDjEZKxJmj+Z9vn+BjYIXT6ILdnU9qnSUP2cWrWN/WAUlue81f9SgM4CQcenltQ==
-
 react-youtube@^10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/react-youtube/-/react-youtube-10.1.0.tgz#7e5670c764f12eb408166e8eb438d788dc64e8b5"
