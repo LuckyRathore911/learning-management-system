@@ -165,7 +165,7 @@ export const dummyDashboardData = {
   totalCourses: 8,
 };
 
-export const dummyStudentEnrolled = [
+export const dummyStudentsEnrolled = [
   {
     student: {
       _id: "user_2qQlvXyr02B4Bq6hT0Gvaa5fT9V",
