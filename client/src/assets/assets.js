@@ -125,45 +125,40 @@ export const dummyDashboardData = {
       courseTitle: "Introduction to JavaScript",
       student: {
         _id: "user_2qQlvXyr02B4Bq6hT0Gvaa5fT9V",
-        name: "Great Stack",
-        imageUrl:
-          "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ycVFsdmFMSkw3ckIxNHZMU2o4ZURWNEtmR2IifQ",
+        name: "Jahnvi Kaur",
+        imageUrl: `${profile_img}`,
       },
     },
     {
       courseTitle: "Advanced Python Programming",
       student: {
         _id: "user_2qQlvXyr02B4Bq6hT0Gvaa5fT9V",
-        name: "Great Stack",
-        imageUrl:
-          "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ycVFsdmFMSkw3ckIxNHZMU2o4ZURWNEtmR2IifQ",
+        name: "Shalini Rawat",
+        imageUrl: `${profile_img_3}`,
       },
     },
     {
       courseTitle: "Web Development Bootcamp",
       student: {
         _id: "user_2qQlvXyr02B4Bq6hT0Gvaa5fT9V",
-        name: "Great Stack",
-        imageUrl:
-          "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ycVFsdmFMSkw3ckIxNHZMU2o4ZURWNEtmR2IifQ",
+        name: "Aakarsh",
+        imageUrl: `${profile_img_2}`,
       },
     },
     {
       courseTitle: "Data Science with Python",
       student: {
         _id: "user_2qQlvXyr02B4Bq6hT0Gvaa5fT9V",
-        name: "Great Stack",
-        imageUrl:
-          "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ycVFsdmFMSkw3ckIxNHZMU2o4ZURWNEtmR2IifQ",
+        name: "Puja Pal",
+        imageUrl: `${profile_img}`,
       },
     },
     {
       courseTitle: "Cybersecurity Basics",
       student: {
         _id: "user_2qQlvXyr02B4Bq6hT0Gvaa5fT9V",
-        name: "Great Stack",
-        imageUrl:
-          "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ycVFsdmFMSkw3ckIxNHZMU2o4ZURWNEtmR2IifQ",
+        name: "Sarwar Khan",
+        imageUrl: `${profile_img_2}`,
       },
     },
   ],
