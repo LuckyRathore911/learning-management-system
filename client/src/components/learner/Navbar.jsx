@@ -32,6 +32,7 @@ const Navbar = () => {
                 onClick={() => {
                   navigate("/admin");
                 }}
+                className="cursor-pointer"
               >
                 {isAdmin ? "Admin Dashboard" : "Become Admin"}
               </button>
@@ -47,7 +48,7 @@ const Navbar = () => {
             onClick={() => {
               openSignIn();
             }}
-            className="bg-blue-600 text-white px-5 rounded-full cursor-pointer"
+            className="bg-blue-600 text-white px-5 py-2 rounded-full cursor-pointer"
           >
             Create Account
           </button>
@@ -63,6 +64,7 @@ const Navbar = () => {
                 onClick={() => {
                   navigate("/admin");
                 }}
+                className="cursor-pointer"
               >
                 {isAdmin ? "Admin Dashboard" : "Become Admin"}
               </button>
