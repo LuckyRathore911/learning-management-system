@@ -1,10 +1,12 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
+import Navbar from "../../components/admin/Navbar";
+
 const Admin = () => {
   return (
-    <div>
-      <h1>Admin</h1>
+    <div className="text-default min-h-screen bg-white">
+      <Navbar />
       <div>{<Outlet />}</div>
     </div>
   );
