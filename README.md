@@ -7,3 +7,11 @@ cd client
 yarn
 yarn dev
 ```
+
+`cd server`
+
+`yarn init`
+
+```bash
+yarn dev
+```
