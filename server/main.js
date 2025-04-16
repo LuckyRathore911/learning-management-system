@@ -6,12 +6,14 @@ import { clerkMiddleware } from "@clerk/express";
 import connectDB from "./configs/mongodb.js"; //file extension is mandatory
 import { clerkWebhooks } from "./controllers/webhooks.js";
 import adminRouter from "./routes/adminRoutes.js";
+import connectCloudinary from "./configs/cloudinary.js";
 
 //initialize express
 const app = express();
 
 //connect to database
 await connectDB();
+await connectCloudinary();
 
 //middlewares
 app.use(cors());
