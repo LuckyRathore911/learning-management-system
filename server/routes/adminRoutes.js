@@ -2,6 +2,7 @@ import express from "express";
 
 import {
   addCourse,
+  getAdminCourses,
   updateRoleToAdmin,
 } from "../controllers/adminController.js";
 import upload from "../configs/multer.js";
@@ -18,5 +19,7 @@ adminRouter.post(
   protectAdmin,
   addCourse
 );
+
+adminRouter.get("/courses", protectAdmin, getAdminCourses);
 
 export default adminRouter;

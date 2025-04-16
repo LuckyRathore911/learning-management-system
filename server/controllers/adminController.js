@@ -48,3 +48,14 @@ export const addCourse = async (req, res) => {
     res.json({ success: false, message: error.message });
   }
 };
+
+//get admin courses
+export const getAdminCourses = async (req, res) => {
+  try {
+    const admin = req.auth.userId;
+    const courses = await Course.find({ admin }); //get courses of this particular admin
+    res.json({ success: true, courses });
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+};
