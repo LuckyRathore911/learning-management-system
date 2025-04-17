@@ -15,3 +15,5 @@ yarn dev
 ```bash
 yarn dev
 ```
+
+dummy card number: 4242 4242 4242 4242
