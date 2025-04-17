@@ -4,9 +4,10 @@ import "dotenv/config";
 import { clerkMiddleware } from "@clerk/express";
 
 import connectDB from "./configs/mongodb.js"; //file extension is mandatory
+import connectCloudinary from "./configs/cloudinary.js";
 import { clerkWebhooks } from "./controllers/webhooks.js";
 import adminRouter from "./routes/adminRoutes.js";
-import connectCloudinary from "./configs/cloudinary.js";
+import courseRouter from "./routes/courseRoutes.js";
 
 //initialize express
 const app = express();
@@ -23,9 +24,9 @@ app.use(clerkMiddleware()); //adds auth property in all the requests
 app.get("/", (req, res) => {
   res.send("API is working");
 });
-
 app.post("/clerk", express.json(), clerkWebhooks);
 app.use("/api/admin", express.json(), adminRouter);
+app.use("/api/course", express.json(), courseRouter);
 
 //port
 const PORT = process.env.PORT || 5000;
