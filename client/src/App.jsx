@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route, useMatch } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 import Home from "./pages/learner/Home";
 import CoursesList from "./pages/learner/CoursesList";
@@ -20,6 +21,7 @@ const App = () => {
 
   return (
     <div className="text-default min-h-screen bg-white">
+      <ToastContainer /> {/*to display api responses */}
       {!isAdminRoute && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
