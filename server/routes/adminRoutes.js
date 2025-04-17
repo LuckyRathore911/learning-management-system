@@ -4,6 +4,8 @@ import {
   addCourse,
   getAdminCourses,
   updateRoleToAdmin,
+  adminDashboardData,
+  getEnrolledStudentsData,
 } from "../controllers/adminController.js";
 import upload from "../configs/multer.js";
 import { protectAdmin } from "../middlewares/authMiddleware.js";
@@ -21,5 +23,7 @@ adminRouter.post(
 );
 
 adminRouter.get("/courses", protectAdmin, getAdminCourses);
+adminRouter.get("/dashboard", protectAdmin, adminDashboardData);
+adminRouter.get("/enrolled-students", protectAdmin, getEnrolledStudentsData);
 
 export default adminRouter;
