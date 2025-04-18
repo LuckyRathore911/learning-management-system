@@ -1,16 +1,42 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 import { assets } from "../../assets/assets";
 import { AppContext } from "../../context/AppContext";
 
 const Navbar = () => {
-  const { navigate, isAdmin } = useContext(AppContext);
+  const { navigate, isAdmin, backendUrl, setIsAdmin, getToken } =
+    useContext(AppContext);
 
   const isCoursesListPage = location.pathname.includes("/courses");
   const { openSignIn } = useClerk();
   const { user } = useUser();
+
+  const becomeAdmin = async () => {
+    try {
+      if (isAdmin) {
+        navigate("/admin");
+        return;
+      }
+
+      const token = await getToken();
+      const { data } = await axios.get(backendUrl + "/api/admin/update-role", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      if (data.success) {
+        setIsAdmin(true);
+        toast.success(data.message);
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
 
   return (
     <div
@@ -28,12 +54,7 @@ const Navbar = () => {
         <div className="flex items-center gap-5">
           {user && (
             <>
-              <button
-                onClick={() => {
-                  navigate("/admin");
-                }}
-                className="cursor-pointer"
-              >
+              <button onClick={becomeAdmin} className="cursor-pointer">
                 {isAdmin ? "Admin Dashboard" : "Become Admin"}
               </button>
               |<Link to="/enrollments">My Enrollments</Link>
@@ -60,12 +81,7 @@ const Navbar = () => {
         <div className="flex items-center gap-1 sm:gap-2 max-sm:text-xs">
           {user && (
             <>
-              <button
-                onClick={() => {
-                  navigate("/admin");
-                }}
-                className="cursor-pointer"
-              >
+              <button onClick={becomeAdmin} className="cursor-pointer">
                 {isAdmin ? "Admin Dashboard" : "Become Admin"}
               </button>
               |<Link to="/enrollments">My Enrollments</Link>
