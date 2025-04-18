@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import humanizeDuration from "humanize-duration";
 import YouTube from "react-youtube";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 import { AppContext } from "../../context/AppContext";
-import Loading from "../../components/learner/Loading";
 import { assets } from "../../assets/assets";
+import Loading from "../../components/learner/Loading";
 import Footer from "../../components/learner/Footer";
-import { toast } from "react-toastify";
 
 const CourseDetails = () => {
   const { id } = useParams();
@@ -18,7 +18,6 @@ const CourseDetails = () => {
   const [playerData, setPlayerData] = useState(null);
 
   const {
-    allCourses,
     currency,
     calculateRating,
     calculateChapterTime,
