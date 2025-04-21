@@ -26,6 +26,9 @@ import patients_icon from "./patients_icon.svg";
 import play_icon from "./play_icon.svg";
 import blue_tick_icon from "./blue_tick_icon.svg";
 import lesson_icon from "./lesson_icon.svg";
+import profile_img_1 from "./girl1.jpeg";
+import profile_img_2 from "./boy.jpg";
+import profile_img_3 from "./girl2.jpg";
 
 export const assets = {
   logo,
@@ -56,6 +59,9 @@ export const assets = {
   play_icon,
   blue_tick_icon,
   lesson_icon,
+  profile_img_1,
+  profile_img_2,
+  profile_img_3,
 };
 
 export const dummyTestimonial = [
