@@ -251,13 +251,13 @@ const AddCourse = () => {
                     }`}
                   />
                   <span className="font-semibold">
-                    {chapterIndex + 1}
-                    {chapter.chapterTitle}
+                    {chapterIndex + 1} {chapter.chapterTitle}
                   </span>
                 </div>
 
                 <span className="text-gray-500">
-                  {chapter.chapterContent.length} lectures
+                  {chapter.chapterContent.length}{" "}
+                  {chapter.chapterContent.length <= 1 ? "lecture" : "lectures"}
                 </span>
 
                 <img
@@ -276,9 +276,8 @@ const AddCourse = () => {
                       className="flex justify-between items-center mb-2"
                     >
                       <span>
-                        {lectureIndex + 1}
-                        {lecture.lectureTitle} - {lecture.lectureDuration} mins
-                        -{" "}
+                        {lectureIndex + 1} {lecture.lectureTitle} -{" "}
+                        {lecture.lectureDuration} mins -{" "}
                         <a
                           href={lecture.lectureUrl}
                           target="_blank"

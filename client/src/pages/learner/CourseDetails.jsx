@@ -108,6 +108,7 @@ const CourseDetails = () => {
           {/* review and ratings from CourseCard component */}
           <div className="flex items-center space-x-2 pt-3 pb-1 text-sm">
             <p>{calculateRating(courseData)}</p>
+
             <div className="flex">
               {[...Array(5)].map((_, i) => (
                 <img
@@ -137,9 +138,7 @@ const CourseDetails = () => {
 
           <p className="text-sm">
             Course by:{" "}
-            <span className="text-blue-600 underline">
-              {courseData.admin.name}
-            </span>
+            <span className="text-blue-600">{courseData.admin.name}</span>
           </p>
 
           <div className="pt-8 text-gray-800">
@@ -187,8 +186,10 @@ const CourseDetails = () => {
                             alt="play-icon"
                             className="w-4 h-4"
                           />
+
                           <div className="flex items-center justify-between w-full text-gray-800 text-xs md:text-default">
                             <p>{lecture.lectureTitle}</p>
+
                             <div className="flex gap-2">
                               {lecture.isPreviewFree && (
                                 <p
@@ -204,6 +205,7 @@ const CourseDetails = () => {
                                   Preview
                                 </p>
                               )}
+
                               <p>
                                 {humanizeDuration(
                                   lecture.lectureDuration * 60000,
@@ -271,7 +273,7 @@ const CourseDetails = () => {
                 {courseData.coursePrice}
               </p>
               <p className="md:text-lg text-gray-500">
-                {courseData.discount} % off
+                {courseData.discount}% off
               </p>
             </div>
 
