@@ -381,7 +381,7 @@ const AddCourse = () => {
                     onChange={e =>
                       setLectureDetails({
                         ...lectureDetails,
-                        isPreviewFree: e.target.value,
+                        isPreviewFree: e.target.checked,
                       })
                     }
                     className="mt-1 scale-125"
